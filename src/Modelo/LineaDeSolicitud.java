@@ -12,4 +12,11 @@ public class LineaDeSolicitud {
     this.talle = talle;
     this.color = color;
   }
+
+    @Override
+    public String toString() {
+        return "LineaDeSolicitud\n" + "cantidad: " + cantidad + ", prenda: " + prenda + ", talle: " + talle + ", color: " + color + "\n";
+    }
+  
+  
 }

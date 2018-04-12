@@ -2,14 +2,15 @@ package Vista;
 
 import Modelo.Catalogo;
 import Modelo.Color;
+import Modelo.LineaDeSolicitud;
+import Modelo.Prenda;
 import Modelo.Solicitud;
 import Modelo.Talle;
-import java.awt.Component;
 import java.util.ArrayList;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
-import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,9 +28,12 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
      * Creates new form VistaNuevoFormulario
      */
     public Catalogo catalogo = new Catalogo();
+    ArrayList<LineaDeSolicitud> lineasDeSolicitud = new ArrayList<>();
     
     public VistaNuevoFormulario() {
         initComponents();
+        limpiarListaDeSolicitudes();
+        llenarComboBoxCodigoPrenda();
         llenarComboBoxColores();
         llenarComboBoxTalles();
     }
@@ -44,25 +48,28 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSpinnerCantidad = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextFieldCodigo = new javax.swing.JTextField();
         jComboBoxColor = new javax.swing.JComboBox<>();
         jComboBoxTalle = new javax.swing.JComboBox<>();
+        jComboBoxCodigoPrenda = new javax.swing.JComboBox<>();
+        jButtonAgregarLineaDeSolicitud = new javax.swing.JButton();
         jButtonGenerarSolicitud = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableLineasDeSolicitud = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setText("Nueva Solicitud");
-
         jLabel2.setText("Cantidad");
+
+        jSpinnerCantidad.setModel(new javax.swing.SpinnerNumberModel(1, 1, 9, 1));
 
         jLabel3.setText("Código");
 
@@ -70,12 +77,64 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
 
         jLabel5.setText("Talle");
 
-        jTextFieldCodigo.setText("Código prenda");
-        jTextFieldCodigo.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAgregarLineaDeSolicitud.setText("Agregar");
+        jButtonAgregarLineaDeSolicitud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCodigoActionPerformed(evt);
+                jButtonAgregarLineaDeSolicitudActionPerformed(evt);
             }
         });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxCodigoPrenda, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxTalle, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jComboBoxColor, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(539, 539, 539))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonAgregarLineaDeSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxCodigoPrenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxTalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAgregarLineaDeSolicitud)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         jButtonGenerarSolicitud.setText("Generar Solicitud");
         jButtonGenerarSolicitud.addActionListener(new java.awt.event.ActionListener() {
@@ -91,88 +150,79 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxTalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonGenerarSolicitud)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
-                .addContainerGap(189, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxTalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonGenerarSolicitud)
-                    .addComponent(jButton2))
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        jTableLineasDeSolicitud.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Cantidad", "Prenda", "Color", "Talle"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableLineasDeSolicitud);
+
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
+        jLabel1.setText("Nueva Solicitud");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButtonGenerarSolicitud)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton2))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonGenerarSolicitud)
+                    .addComponent(jButton2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCodigoActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButtonGenerarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarSolicitudActionPerformed
         GenerarSolicitud();
     }//GEN-LAST:event_jButtonGenerarSolicitudActionPerformed
+
+    private void jButtonAgregarLineaDeSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarLineaDeSolicitudActionPerformed
+        String cantidad = getjSpinnerCantidad().getValue().toString();
+        String codigo = getjComboBoxCodigoPrenda().getSelectedItem().toString();
+        String color = getjComboBoxColor().getSelectedItem().toString();
+        String talle = getjComboBoxTalle().getSelectedItem().toString();
+        //agrega a la tabla
+        this.agregarLineaDeSolicitud(cantidad, codigo, color, talle);
+    }//GEN-LAST:event_jButtonAgregarLineaDeSolicitudActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,13 +273,16 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         return jSpinnerCantidad;
     }
 
-    public JTextField getjTextFieldCodigo() {
-        return jTextFieldCodigo;
+    public JComboBox<String> getjComboBoxCodigoPrenda() {
+        return jComboBoxCodigoPrenda;
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonAgregarLineaDeSolicitud;
     private javax.swing.JButton jButtonGenerarSolicitud;
+    private javax.swing.JComboBox<String> jComboBoxCodigoPrenda;
     private javax.swing.JComboBox<String> jComboBoxColor;
     private javax.swing.JComboBox<String> jComboBoxTalle;
     private javax.swing.JLabel jLabel1;
@@ -238,22 +291,29 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerCantidad;
-    private javax.swing.JTextField jTextFieldCodigo;
+    private javax.swing.JTable jTableLineasDeSolicitud;
     // End of variables declaration//GEN-END:variables
    
     private void GenerarSolicitud() {
-        String cantidad = getjSpinnerCantidad().getValue().toString();
-        String codigo = getjTextFieldCodigo().getText();
-        String color = getjComboBoxColor().getSelectedItem().toString();
-        String talle = getjComboBoxTalle().getSelectedItem().toString();
         
-        Solicitud.GenerarSolicitud(cantidad, codigo, color, talle);
-        
-        Component frame = null;
-        JOptionPane.showMessageDialog(frame, "Cantidad: " + cantidad + "\nCodigo: " + codigo + "\nColor: " + color + "\nTalle: " + talle);
+        //Component frame = null;
+        //JOptionPane.showMessageDialog(frame, "Cantidad: " + cantidad + "\nCodigo: " + codigo + "\nColor: " + color + "\nTalle: " + talle);
     }
 
+    public void limpiarListaDeSolicitudes() {
+        DefaultTableModel modeloTabla = (DefaultTableModel) jTableLineasDeSolicitud.getModel();
+        modeloTabla.setRowCount(0);
+    }
+    
+    private void llenarComboBoxCodigoPrenda() {
+        ArrayList<Prenda> prendas = catalogo.inicializarCatalogo();
+        for(Prenda prenda : prendas){
+            jComboBoxCodigoPrenda.addItem(prenda.getCodigo());
+        }
+    }
+    
     private void llenarComboBoxColores() {
         ArrayList<Color> colores = catalogo.InicializarColores();
         for(Color color : colores){
@@ -266,5 +326,45 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         for(Talle talle : talles){
             jComboBoxTalle.addItem(talle.getNombreTalle());
         }
+    }
+    
+    public Prenda buscarPrenda(String codigo){
+        Prenda prendaEncontrada = new Prenda();
+        ArrayList<Prenda> prendas = catalogo.inicializarCatalogo();
+        for(Prenda prenda : prendas){
+            if(prenda.getCodigo() == codigo){
+                prendaEncontrada = prenda;
+            }
+        }
+        return prendaEncontrada;
+    }
+    
+    public Talle buscarTalle(String nombreTalle){
+        Talle talleEncontrado = new Talle();
+        ArrayList<Talle> talles = catalogo.InicializarTalles();
+        for(Talle talle : talles){
+            if(talle.getNombreTalle() == nombreTalle){
+                talleEncontrado = talle;
+            }
+        }
+        return talleEncontrado;
+    }
+    
+    public Color buscarColor(String nombreColor){
+        Color colorEncontrado = new Color();
+        ArrayList<Color> colores = catalogo.InicializarColores();
+        for(Color color: colores){
+            if(color.getNombreColor() == nombreColor){
+                colorEncontrado = color;
+            }
+        }
+        return colorEncontrado;
+    }
+    public void agregarLineaDeSolicitud(String cantidad, String codigoPrenda, String color, String talle) {
+        DefaultTableModel modeloTabla = (DefaultTableModel) jTableLineasDeSolicitud.getModel();
+        modeloTabla.addRow(new Object[] {cantidad, codigoPrenda, color, talle});
+        LineaDeSolicitud lineaDeSolicitud = new LineaDeSolicitud(Integer.parseInt(cantidad), buscarPrenda(codigoPrenda), buscarTalle(talle), buscarColor(color));
+        lineasDeSolicitud.add(lineaDeSolicitud);
+        System.out.println(lineasDeSolicitud.toString());
     }
 }

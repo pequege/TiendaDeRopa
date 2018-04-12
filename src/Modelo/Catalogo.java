@@ -11,10 +11,11 @@ public class Catalogo {
   private final ArrayList<Talle> talles = new ArrayList<>();
   private final ArrayList<Color> colores = new ArrayList<>();
 
-  public void inicializarCatalogo(){
-    prendas.add(new Prenda("1", 599.99, "Remera mangas corta", material1));
-    prendas.add(new Prenda("2", 1599.99, "Camisa mangas larga", material3));
-    prendas.add(new Prenda("3", 1999.99, "Campera con capucha", material2));
+  public ArrayList<Prenda> inicializarCatalogo(){
+    prendas.add(new Prenda("101", 599.99, "Remera mangas corta", material1));
+    prendas.add(new Prenda("202", 1599.99, "Camisa mangas larga", material3));
+    prendas.add(new Prenda("303", 1999.99, "Campera con capucha", material2));
+    return prendas;
   }
 
   public void mostrarCatalogo(){

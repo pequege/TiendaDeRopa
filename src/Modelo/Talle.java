@@ -3,6 +3,9 @@ package Modelo;
 public class Talle {
     private String nombreTalle;
 
+    public Talle() {
+    }
+
     public String getNombreTalle() {
         return nombreTalle;
     }
