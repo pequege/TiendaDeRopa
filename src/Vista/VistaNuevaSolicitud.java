@@ -4,33 +4,19 @@ import Modelo.Catalogo;
 import Modelo.Color;
 import Modelo.LineaDeSolicitud;
 import Modelo.Prenda;
-import Modelo.Solicitud;
 import Modelo.Talle;
 import java.util.ArrayList;
 import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 import javax.swing.table.DefaultTableModel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author pequege
- */
-public class VistaNuevoFormulario extends javax.swing.JFrame {
-
-    /**
-     * Creates new form VistaNuevoFormulario
-     */
+public class VistaNuevaSolicitud extends javax.swing.JDialog {
+    
     public Catalogo catalogo = new Catalogo();
     ArrayList<LineaDeSolicitud> lineasDeSolicitud = new ArrayList<>();
-    
-    public VistaNuevoFormulario() {
+
+    public VistaNuevaSolicitud(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         limpiarListaDeSolicitudes();
         llenarComboBoxCodigoPrenda();
@@ -57,13 +43,13 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         jComboBoxTalle = new javax.swing.JComboBox<>();
         jComboBoxCodigoPrenda = new javax.swing.JComboBox<>();
         jButtonAgregarLineaDeSolicitud = new javax.swing.JButton();
-        jButtonGenerarSolicitud = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableLineasDeSolicitud = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jButtonGenerarSolicitud = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -104,9 +90,7 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jComboBoxColor, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jSpinnerCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(539, 539, 539))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonAgregarLineaDeSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -136,20 +120,6 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButtonGenerarSolicitud.setText("Generar Solicitud");
-        jButtonGenerarSolicitud.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGenerarSolicitudActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Cancelar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jTableLineasDeSolicitud.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -165,6 +135,20 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
         jLabel1.setText("Nueva Solicitud");
+
+        jButtonGenerarSolicitud.setText("Generar Solicitud");
+        jButtonGenerarSolicitud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenerarSolicitudActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,14 +191,6 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButtonGenerarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarSolicitudActionPerformed
-        GenerarSolicitud();
-    }//GEN-LAST:event_jButtonGenerarSolicitudActionPerformed
-
     private void jButtonAgregarLineaDeSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarLineaDeSolicitudActionPerformed
         String cantidad = getjSpinnerCantidad().getValue().toString();
         String codigo = getjComboBoxCodigoPrenda().getSelectedItem().toString();
@@ -223,6 +199,14 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         //agrega a la tabla
         this.agregarLineaDeSolicitud(cantidad, codigo, color, talle);
     }//GEN-LAST:event_jButtonAgregarLineaDeSolicitudActionPerformed
+
+    private void jButtonGenerarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarSolicitudActionPerformed
+        GenerarSolicitud();
+    }//GEN-LAST:event_jButtonGenerarSolicitudActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,24 +225,33 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaNuevoFormulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaNuevaSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaNuevoFormulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaNuevaSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaNuevoFormulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaNuevaSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaNuevoFormulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaNuevaSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
-        
-        
-        /* Create and display the form */
+
+        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaNuevoFormulario().setVisible(true);
+                VistaNuevaSolicitud dialog = new VistaNuevaSolicitud(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
+    }
+
+    public JComboBox<String> getjComboBoxCodigoPrenda() {
+        return jComboBoxCodigoPrenda;
     }
 
     public JComboBox<String> getjComboBoxColor() {
@@ -272,12 +265,6 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
     public JSpinner getjSpinnerCantidad() {
         return jSpinnerCantidad;
     }
-
-    public JComboBox<String> getjComboBoxCodigoPrenda() {
-        return jComboBoxCodigoPrenda;
-    }
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonAgregarLineaDeSolicitud;
@@ -295,7 +282,7 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinnerCantidad;
     private javax.swing.JTable jTableLineasDeSolicitud;
     // End of variables declaration//GEN-END:variables
-   
+
     private void GenerarSolicitud() {
         
         //Component frame = null;
@@ -365,6 +352,6 @@ public class VistaNuevoFormulario extends javax.swing.JFrame {
         modeloTabla.addRow(new Object[] {cantidad, codigoPrenda, color, talle});
         LineaDeSolicitud lineaDeSolicitud = new LineaDeSolicitud(Integer.parseInt(cantidad), buscarPrenda(codigoPrenda), buscarTalle(talle), buscarColor(color));
         lineasDeSolicitud.add(lineaDeSolicitud);
-        System.out.println(lineasDeSolicitud.toString());
+        //System.out.println(lineasDeSolicitud.toString());
     }
 }

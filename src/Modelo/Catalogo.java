@@ -42,6 +42,4 @@ public class Catalogo {
     colores.add(new Color("Verde"));
     return colores;
   }
-
-
 }
