@@ -12,7 +12,7 @@ public class VistaConsultaStock extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();        
         limpiarListaDeStock();
-        poblarListaDeStock();
+        //poblarListaDeStock();
     }
 
     /**
@@ -166,11 +166,11 @@ public class VistaConsultaStock extends javax.swing.JDialog {
         modeloTabla.setRowCount(0);
     }
     
-    public void poblarListaDeStock() {
-        ArrayList<Stock> stocks = sucursal.cargarStock();
-        DefaultTableModel modeloTabla = (DefaultTableModel) jTableStock.getModel();
-        for(Stock stock: stocks){
-            modeloTabla.addRow(new Object[] {stock.getCantidad(), stock.getPrenda().getCodigo(), stock.getColor().getNombreColor(), stock.getTalle().getNombreTalle()});   
-        }
-    }
+//    public void poblarListaDeStock() {
+//        ArrayList<Stock> stocks = sucursal.cargarStock();
+//        DefaultTableModel modeloTabla = (DefaultTableModel) jTableStock.getModel();
+//        for(Stock stock: stocks){
+//            modeloTabla.addRow(new Object[] {stock.getCantidad(), stock.getPrenda().getCodigo(), stock.getColor().getNombreColor(), stock.getTalle().getNombreTalle()});
+//        }
+//    }
 }

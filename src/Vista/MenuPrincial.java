@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vista;
 
-/**
- *
- * @author pequege
- */
+import Controlador.ControladorNuevaSolicitud;
+import Controlador.ControladorConsultarStock;
+
 public class MenuPrincial extends javax.swing.JFrame {
 
-    VistaNuevaSolicitud vistaSolicitud = new VistaNuevaSolicitud(this, rootPaneCheckingEnabled);
-    VistaConsultaStock vistaStock = new VistaConsultaStock(this, rootPaneCheckingEnabled);
-    public MenuPrincial() {
+  public MenuPrincial() {
         initComponents();
     }
 
@@ -97,13 +89,14 @@ public class MenuPrincial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonConsultarStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarStockActionPerformed
-        vistaStock.setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_jButtonConsultarStockActionPerformed
-
     private void jButtonNuevaSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaSolicitudActionPerformed
-        vistaSolicitud.setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_jButtonNuevaSolicitudActionPerformed
+      ControladorNuevaSolicitud.crearSolicitud(this, rootPaneCheckingEnabled);
+      //vistaNuevaSolicitud.setVisible(rootPaneCheckingEnabled);
+    }
+
+    private void jButtonConsultarStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarStockActionPerformed
+      ControladorConsultarStock.consultarStock(this, rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jButtonConsultarStockActionPerformed
 
     /**
      * @param args the command line arguments
