@@ -31,23 +31,23 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
 
     jPanel1 = new javax.swing.JPanel();
     jScrollPane1 = new javax.swing.JScrollPane();
-    jTable1 = new javax.swing.JTable();
-    jButton1 = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
+    jTableSolicitudesPendientes = new javax.swing.JTable();
+    jButtonMostrarSolicitud = new javax.swing.JButton();
+    jButtonVolver = new javax.swing.JButton();
     jPanel2 = new javax.swing.JPanel();
     jLabel2 = new javax.swing.JLabel();
     jScrollPane2 = new javax.swing.JScrollPane();
-    jTable2 = new javax.swing.JTable();
-    jSpinner1 = new javax.swing.JSpinner();
+    jTableLineasDeSolicitud = new javax.swing.JTable();
+    jSpinnerCantidadLineaDeSolicitud = new javax.swing.JSpinner();
     jLabel3 = new javax.swing.JLabel();
-    jButton2 = new javax.swing.JButton();
+    jButtonResponderACantidadDeLDS = new javax.swing.JButton();
     jLabel1 = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
     jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-    jTable1.setModel(new javax.swing.table.DefaultTableModel(
+    jTableSolicitudesPendientes.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
         {null, null, null, null},
         {null, null, null, null},
@@ -66,9 +66,9 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         return canEdit [columnIndex];
       }
     });
-    jScrollPane1.setViewportView(jTable1);
+    jScrollPane1.setViewportView(jTableSolicitudesPendientes);
 
-    jButton1.setText("Mostrar Solicitud");
+    jButtonMostrarSolicitud.setText("Mostrar Solicitud");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -79,7 +79,7 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
           .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(jButton1)
+            .addComponent(jButtonMostrarSolicitud)
             .addGap(0, 0, Short.MAX_VALUE)))
         .addContainerGap())
     );
@@ -89,17 +89,22 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         .addContainerGap()
         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
         .addGap(18, 18, 18)
-        .addComponent(jButton1))
+        .addComponent(jButtonMostrarSolicitud))
     );
 
-    jButton3.setText("Volver");
+    jButtonVolver.setText("Volver");
+    jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonVolverActionPerformed(evt);
+      }
+    });
 
     jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
     jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     jLabel2.setText("Solicitud");
 
-    jTable2.setModel(new javax.swing.table.DefaultTableModel(
+    jTableLineasDeSolicitud.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
         {null, null, null, null},
         {null, null, null, null},
@@ -118,12 +123,12 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         return canEdit [columnIndex];
       }
     });
-    jScrollPane2.setViewportView(jTable2);
+    jScrollPane2.setViewportView(jTableLineasDeSolicitud);
 
     jLabel3.setText("Cantidad");
 
-    jButton2.setText("Responder Linea");
-    jButton2.setToolTipText("Responder a prenda seleccionada en tabla");
+    jButtonResponderACantidadDeLDS.setText("Responder Linea");
+    jButtonResponderACantidadDeLDS.setToolTipText("Responder a prenda seleccionada en tabla");
 
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
@@ -136,9 +141,9 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
             .addGap(6, 6, 6)
             .addComponent(jLabel3)
             .addGap(18, 18, 18)
-            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jSpinnerCantidadLineaDeSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(jButton2))
+            .addComponent(jButtonResponderACantidadDeLDS))
           .addComponent(jLabel2)
           .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -153,8 +158,8 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel3)
-          .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton2))
+          .addComponent(jSpinnerCantidadLineaDeSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jButtonResponderACantidadDeLDS))
         .addContainerGap(10, Short.MAX_VALUE))
     );
 
@@ -170,7 +175,7 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
           .addGroup(layout.createSequentialGroup()
             .addContainerGap()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(jButton3)
+              .addComponent(jButtonVolver)
               .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
               .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
           .addGroup(layout.createSequentialGroup()
@@ -188,12 +193,16 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jButton3)
+        .addComponent(jButtonVolver)
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
+
+  private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
+    this.dispose();
+  }//GEN-LAST:event_jButtonVolverActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -238,9 +247,9 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
 	}
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton2;
-  private javax.swing.JButton jButton3;
+  private javax.swing.JButton jButtonMostrarSolicitud;
+  private javax.swing.JButton jButtonResponderACantidadDeLDS;
+  private javax.swing.JButton jButtonVolver;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;
@@ -248,8 +257,8 @@ public class VistaSolicitudesPendientes extends javax.swing.JDialog {
   private javax.swing.JPanel jPanel2;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane2;
-  private javax.swing.JSpinner jSpinner1;
-  private javax.swing.JTable jTable1;
-  private javax.swing.JTable jTable2;
+  private javax.swing.JSpinner jSpinnerCantidadLineaDeSolicitud;
+  private javax.swing.JTable jTableLineasDeSolicitud;
+  private javax.swing.JTable jTableSolicitudesPendientes;
   // End of variables declaration//GEN-END:variables
 }

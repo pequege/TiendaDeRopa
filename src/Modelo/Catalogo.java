@@ -62,9 +62,11 @@ public class Catalogo {
     prendas = new ArrayList<>();
     colores = new ArrayList<>();
     talles = new ArrayList<>();
+    stocks = new ArrayList<>();
     cargarPrendas();
     cargarColores();
     cargarTalles();
+    cargarStock();
   }
 
   public Prenda buscarPrenda (String codigoPrenda) {

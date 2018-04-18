@@ -17,13 +17,19 @@ public class ControladorConsultarStock {
     vistaConsultaStock = new VistaConsultaStock(menuPrincial, rootPaneCheckingEnabled);
     vistaConsultaStock.setVisible(rootPaneCheckingEnabled);
     stocks = catalogo.getStocks();
-    cargarStock();
   }
 
-  public static void cargarStock (){
-    DefaultTableModel modeloTabla = (DefaultTableModel) vistaConsultaStock.getjTableStock().getModel();
-    for(Stock stock: stocks){
-      modeloTabla.addRow(new Object[] {stock.getCantidad(), stock.getPrenda().getCodigo(), stock.getColor().getNombreColor(), stock.getTalle().getNombreTalle()});
+  public static DefaultTableModel cargarStock (DefaultTableModel modeloTabla){
+    DefaultTableModel modelo = modeloTabla;
+    stocks = catalogo.getStocks();
+    for (Stock stock : stocks) {
+      String cantidad = String.valueOf(stock.getCantidad());
+      String codigoPrenda = stock.getPrenda().getCodigo();
+      String color = stock.getColor().getNombreColor();
+      String talle = stock.getTalle().getNombreTalle();
+      modelo.addRow(new Object[] {cantidad, codigoPrenda, color, talle});
+      System.out.println(cantidad + codigoPrenda + color + talle);
     }
+    return modelo;
   }
 }

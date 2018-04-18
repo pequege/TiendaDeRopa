@@ -2,41 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc0c981f-f7e8-4f93-8011-5cec5c0bbdd4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$4$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Controlador/ControladorNuevaSolicitud.class" afterPath="$PROJECT_DIR$/build/classes/Controlador/ControladorNuevaSolicitud.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Controlador/main.class" afterPath="$PROJECT_DIR$/build/classes/Controlador/main.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes$3$1.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Controlador/ControladorConsultarStock.class" afterPath="$PROJECT_DIR$/build/classes/Controlador/ControladorConsultarStock.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Modelo/Catalogo.class" afterPath="$PROJECT_DIR$/build/classes/Modelo/Catalogo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Modelo/LineaDeSolicitud.class" afterPath="$PROJECT_DIR$/build/classes/Modelo/LineaDeSolicitud.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Modelo/Solicitud.class" afterPath="$PROJECT_DIR$/build/classes/Modelo/Solicitud.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Modelo/Stock.class" afterPath="$PROJECT_DIR$/build/classes/Modelo/Stock.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Modelo/Sucursal.class" afterPath="$PROJECT_DIR$/build/classes/Modelo/Sucursal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$1.class" afterPath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$2.class" afterPath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$3.class" afterPath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial.class" afterPath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$1.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$2.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$3$1.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$3.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$2.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$3.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$4.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes$2.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes$3.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes.class" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Controlador/ControladorConsultarStock.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Controlador/ControladorConsultarStock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Modelo/Catalogo.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Modelo/Catalogo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$1.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$2.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$3$1.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$3.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaConsultaStock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaNuevaSolicitud$2.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaNuevaSolicitud$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaNuevaSolicitud.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaNuevaSolicitud.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes$2.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes$3.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes.class" afterPath="$PROJECT_DIR$/out/production/TiendaDeRopa/Vista/VistaSolicitudesPendientes.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial.form" afterPath="$PROJECT_DIR$/build/classes/Vista/MenuPrincial.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock.form" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaConsultaStock.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud.form" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaNuevaSolicitud.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes.form" afterPath="$PROJECT_DIR$/build/classes/Vista/VistaSolicitudesPendientes.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/ControladorConsultarStock.java" afterPath="$PROJECT_DIR$/src/Controlador/ControladorConsultarStock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Catalogo.java" afterPath="$PROJECT_DIR$/src/Modelo/Catalogo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Solicitud.java" afterPath="$PROJECT_DIR$/src/Modelo/Solicitud.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Stock.java" afterPath="$PROJECT_DIR$/src/Modelo/Stock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Sucursal.java" afterPath="$PROJECT_DIR$/src/Modelo/Sucursal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/MenuPrincial.form" afterPath="$PROJECT_DIR$/src/Vista/MenuPrincial.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/MenuPrincial.java" afterPath="$PROJECT_DIR$/src/Vista/MenuPrincial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaConsultaStock.form" afterPath="$PROJECT_DIR$/src/Vista/VistaConsultaStock.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaConsultaStock.java" afterPath="$PROJECT_DIR$/src/Vista/VistaConsultaStock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.form" afterPath="$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.java" afterPath="$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.form" afterPath="$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java" afterPath="$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,29 +58,14 @@
       <file leaf-file-name="Catalogo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Catalogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="56" column="38" lean-forward="false" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+            <state relative-caret-position="878">
+              <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
               <folding>
-                <element signature="method#Catalogo#0;class#Catalogo#0" expanded="false" />
+                <element signature="e#1728#1729#0" expanded="true" />
+                <element signature="e#1751#1752#0" expanded="true" />
                 <element signature="method#buscarPrenda#0;class#Catalogo#0" expanded="false" />
                 <element signature="method#buscarColor#0;class#Catalogo#0" expanded="false" />
                 <element signature="method#buscarTalle#0;class#Catalogo#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControladorNuevaSolicitud.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controlador/ControladorNuevaSolicitud.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-183">
-              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="31" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#cargarColores#0;class#ControladorNuevaSolicitud#0" expanded="false" />
-                <element signature="method#cargarTalles#0;class#ControladorNuevaSolicitud#0" expanded="false" />
-                <element signature="e#2116#2117#0" expanded="true" />
-                <element signature="e#2168#2169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,11 +84,34 @@
       <file leaf-file-name="VistaConsultaStock.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vista/VistaConsultaStock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="174" column="35" lean-forward="false" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
+            <state relative-caret-position="277">
+              <caret line="189" column="3" lean-forward="false" selection-start-line="189" selection-start-column="3" selection-end-line="189" selection-end-column="3" />
               <folding>
-                <element signature="e#7255#7256#0" expanded="true" />
-                <marker date="1524011378835" expanded="false" signature="721:751" ph="/unchecked/" />
+                <marker date="1524062610329" expanded="false" signature="772:802" ph="/unchecked/" />
+                <marker date="1524062610329" expanded="false" signature="7325:7332" ph=" { " />
+                <marker date="1524062610329" expanded="false" signature="7351:7355" ph=" }" />
+                <marker date="1524062610329" expanded="true" signature="7393:7510" ph="{...}" />
+                <marker date="1524062610329" expanded="true" signature="7542:7683" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VistaSolicitudesPendientes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2253#2254#0" expanded="true" />
+                <element signature="e#3647#3648#0" expanded="true" />
+                <element signature="e#3698#3699#0" expanded="true" />
+                <element signature="e#4405#4406#0" expanded="true" />
+                <element signature="e#4451#4452#0" expanded="true" />
+                <element signature="e#9167#9254#0" expanded="true" />
+                <element signature="e#10667#10816#0" expanded="true" />
+                <element signature="e#10815#10816#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,8 +120,8 @@
       <file leaf-file-name="ControladorConsultarStock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controlador/ControladorConsultarStock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,11 +161,12 @@
         <option value="$PROJECT_DIR$/src/Modelo/Solicitud.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Sucursal.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Stock.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Catalogo.java" />
         <option value="$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.java" />
         <option value="$PROJECT_DIR$/src/Vista/MenuPrincial.java" />
-        <option value="$PROJECT_DIR$/src/Vista/VistaConsultaStock.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Catalogo.java" />
         <option value="$PROJECT_DIR$/src/Controlador/ControladorConsultarStock.java" />
+        <option value="$PROJECT_DIR$/src/Vista/VistaConsultaStock.java" />
+        <option value="$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java" />
       </list>
     </option>
   </component>
@@ -178,6 +194,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -213,8 +231,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -354,28 +370,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1370" height="768" extended-state="6" />
+    <frame x="19" y="27" width="1370" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988006" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -406,7 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -418,8 +434,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#cargarColores#0;class#ControladorNuevaSolicitud#0" expanded="false" />
             <element signature="method#cargarTalles#0;class#ControladorNuevaSolicitud#0" expanded="false" />
-            <element signature="e#2116#2117#0" expanded="true" />
-            <element signature="e#2168#2169#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -439,8 +453,11 @@
         <state relative-caret-position="165">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding>
-            <element signature="e#7255#7256#0" expanded="true" />
-            <marker date="1524011378835" expanded="false" signature="721:751" ph="/unchecked/" />
+            <marker date="1524062610329" expanded="false" signature="772:802" ph="/unchecked/" />
+            <marker date="1524062610329" expanded="false" signature="7325:7332" ph=" { " />
+            <marker date="1524062610329" expanded="false" signature="7351:7355" ph=" }" />
+            <marker date="1524062610329" expanded="true" signature="7393:7510" ph="{...}" />
+            <marker date="1524062610329" expanded="true" signature="7542:7683" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -450,17 +467,8 @@
         <state relative-caret-position="330">
           <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
           <folding>
-            <element signature="e#410#440#0" expanded="true" />
-            <element signature="e#443#532#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1521#1522#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#5122#5209#0" expanded="true" />
-            <element signature="e#6612#6613#0" expanded="true" />
-            <element signature="e#6679#6680#0" expanded="true" />
+            <element signature="e#443#532#0" expanded="false" />
+            <element signature="e#5122#5209#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -469,9 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -479,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +492,7 @@
         <state relative-caret-position="660">
           <caret line="206" column="79" lean-forward="false" selection-start-line="206" selection-start-column="79" selection-end-line="206" selection-end-column="79" />
           <folding>
-            <marker date="1524010871662" expanded="false" signature="14382:14388" ph=" }" />
+            <marker date="1524062724757" expanded="false" signature="14452:14458" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -504,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -512,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,15 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,34 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Catalogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="56" column="38" lean-forward="false" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-          <folding>
-            <element signature="method#Catalogo#0;class#Catalogo#0" expanded="false" />
-            <element signature="method#buscarPrenda#0;class#Catalogo#0" expanded="false" />
-            <element signature="method#buscarColor#0;class#Catalogo#0" expanded="false" />
-            <element signature="method#buscarTalle#0;class#Catalogo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controlador/ControladorNuevaSolicitud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#cargarColores#0;class#ControladorNuevaSolicitud#0" expanded="false" />
-            <element signature="method#cargarTalles#0;class#ControladorNuevaSolicitud#0" expanded="false" />
-            <element signature="e#2116#2117#0" expanded="true" />
-            <element signature="e#2168#2169#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,17 +585,9 @@
         <state relative-caret-position="285">
           <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
           <folding>
-            <element signature="e#443#532#0" expanded="true" />
-            <element signature="e#5122#5209#0" expanded="true" />
+            <element signature="e#443#532#0" expanded="false" />
+            <element signature="e#5122#5209#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,35 +600,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-670">
           <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/VistaConsultaStock.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="174" column="35" lean-forward="false" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
-          <folding>
-            <element signature="e#7255#7256#0" expanded="true" />
-            <marker date="1524011378835" expanded="false" signature="721:751" ph="/unchecked/" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vista/VistaNuevaSolicitud.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="307" column="77" lean-forward="true" selection-start-line="307" selection-start-column="41" selection-end-line="307" selection-end-column="77" />
+        <state relative-caret-position="247">
+          <caret line="307" column="8" lean-forward="false" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="80" />
           <folding>
-            <marker date="1524010871662" expanded="false" signature="14382:14388" ph=" }" />
+            <marker date="1524062724757" expanded="false" signature="14452:14458" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controlador/ControladorNuevaSolicitud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="31" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cargarColores#0;class#ControladorNuevaSolicitud#0" expanded="false" />
+            <element signature="method#cargarTalles#0;class#ControladorNuevaSolicitud#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Catalogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+          <folding>
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1751#1752#0" expanded="true" />
+            <element signature="method#buscarPrenda#0;class#Catalogo#0" expanded="false" />
+            <element signature="method#buscarColor#0;class#Catalogo#0" expanded="false" />
+            <element signature="method#buscarTalle#0;class#Catalogo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vista/VistaConsultaStock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="189" column="3" lean-forward="false" selection-start-line="189" selection-start-column="3" selection-end-line="189" selection-end-column="3" />
+          <folding>
+            <marker date="1524062610329" expanded="false" signature="772:802" ph="/unchecked/" />
+            <marker date="1524062610329" expanded="false" signature="7325:7332" ph=" { " />
+            <marker date="1524062610329" expanded="false" signature="7351:7355" ph=" }" />
+            <marker date="1524062610329" expanded="true" signature="7393:7510" ph="{...}" />
+            <marker date="1524062610329" expanded="true" signature="7542:7683" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vista/VistaSolicitudesPendientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
+            <element signature="e#3647#3648#0" expanded="true" />
+            <element signature="e#3698#3699#0" expanded="true" />
+            <element signature="e#4405#4406#0" expanded="true" />
+            <element signature="e#4451#4452#0" expanded="true" />
+            <element signature="e#9167#9254#0" expanded="true" />
+            <element signature="e#10667#10816#0" expanded="true" />
+            <element signature="e#10815#10816#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controlador/ControladorConsultarStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

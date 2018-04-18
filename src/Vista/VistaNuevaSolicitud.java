@@ -47,7 +47,7 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
     jTableLineasDeSolicitud = new javax.swing.JTable();
     jLabel1 = new javax.swing.JLabel();
     jButtonGenerarSolicitud = new javax.swing.JButton();
-    jButton2 = new javax.swing.JButton();
+    jButtonCancelar = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -151,10 +151,10 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
       }
     });
 
-    jButton2.setText("Cancelar");
-    jButton2.addActionListener(new java.awt.event.ActionListener() {
+    jButtonCancelar.setText("Cancelar");
+    jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton2ActionPerformed(evt);
+        jButtonCancelarActionPerformed(evt);
       }
     });
 
@@ -172,7 +172,7 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
                 .addGap(12, 12, 12)
                 .addComponent(jButtonGenerarSolicitud)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2))))
+                .addComponent(jButtonCancelar))))
           .addGroup(layout.createSequentialGroup()
             .addGap(21, 21, 21)
             .addComponent(jLabel1))
@@ -192,7 +192,7 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
         .addGap(28, 28, 28)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jButtonGenerarSolicitud)
-          .addComponent(jButton2))
+          .addComponent(jButtonCancelar))
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
@@ -219,9 +219,9 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
       }
     }//GEN-LAST:event_jButtonGenerarSolicitudActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -281,8 +281,8 @@ public class VistaNuevaSolicitud extends javax.swing.JDialog {
         return jSpinnerCantidad;
     }
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton2;
   private javax.swing.JButton jButtonAgregarLineaDeSolicitud;
+  private javax.swing.JButton jButtonCancelar;
   private javax.swing.JButton jButtonGenerarSolicitud;
   private javax.swing.JComboBox<String> jComboBoxCodigoPrenda;
   private javax.swing.JComboBox<String> jComboBoxColor;
