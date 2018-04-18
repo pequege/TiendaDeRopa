@@ -22,10 +22,10 @@ public class Stock {
         return cantidad;
     }
     
-    public Stock(int cantidad, Prenda prenda, Talle talle, Color color) {
-        this.cantidad = cantidad;
-        this.prenda = prenda;
-        this.talle = talle;
-        this.color = color;
+    public Stock(int cantidad, Prenda prenda, Color color, Talle talle) {
+      this.cantidad = cantidad;
+      this.prenda = prenda;
+      this.color = color;
+      this.talle = talle;
     }
 }

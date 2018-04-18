@@ -10,6 +10,14 @@ public class Catalogo {
   private ArrayList<Prenda> prendas;
   private ArrayList<Talle> talles;
   private ArrayList<Color> colores;
+  private ArrayList<Stock> stocks;
+
+  public void cargarStock () {
+    stocks.add(new Stock(9, buscarPrenda("101"), buscarColor("Azul"), buscarTalle("L")));
+    stocks.add(new Stock(10, buscarPrenda("202"), buscarColor("Azul"), buscarTalle("L")));
+    stocks.add(new Stock(7, buscarPrenda("101"), buscarColor("Blanco"), buscarTalle("S")));
+    stocks.add(new Stock(5, buscarPrenda("303"), buscarColor("Rojo"), buscarTalle("L")));
+  }
 
   public void cargarPrendas (){
     prendas.add(new Prenda("101", 599.99, "Remera mangas corta", material1));
@@ -44,6 +52,10 @@ public class Catalogo {
 
   public ArrayList<Color> getColores () {
     return colores;
+  }
+
+  public ArrayList<Stock> getStocks () {
+    return stocks;
   }
 
   public Catalogo () {
