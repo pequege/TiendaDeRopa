@@ -15,7 +15,7 @@ public class Solicitud {
   public Solicitud () {
     this.id = contador++;
     this.fecha = new Date();
-    this.lineasDeSolicitud = lineasDeSolicitud;
+    this.lineasDeSolicitud = new ArrayList<>();
     this.estado = Estado.PENDIENTE;
 
   }

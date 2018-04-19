@@ -13,6 +13,7 @@ public class ControladorNuevaSolicitud {
   static Catalogo catalogo;
   static ArrayList<LineaDeSolicitud> lineasDeSolicitud;
   static Solicitud solicitud;
+  static Sucursal sucursal = new Sucursal();
 
   public static void crearSolicitud (MenuPrincial menuPrincial, boolean rootPaneCheckingEnabled) {
     lineasDeSolicitud = new ArrayList<>();
@@ -77,5 +78,8 @@ public class ControladorNuevaSolicitud {
     solicitud = new Solicitud();
     solicitud.setLineasDeSolicitud(lineasDeSolicitud);
     solicitud.mostrarSolicitud();
+    String sucursalActual = Main.getSucursalActual();
+    sucursal = catalogo.buscarSucursal(sucursalActual);
+    sucursal.getSolicitudes().add(solicitud);
   }
 }

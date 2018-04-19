@@ -1,6 +1,7 @@
 package Controlador;
 
 import Modelo.Catalogo;
+import Modelo.Sucursal;
 import Vista.MenuPrincial;
 import Vista.VistaConsultaStock;
 import Modelo.Stock;
@@ -12,16 +13,19 @@ public class ControladorConsultarStock {
   static VistaConsultaStock vistaConsultaStock;
   static ArrayList<Stock> stocks;
   static Catalogo catalogo = new Catalogo();
+  static Sucursal sucursal;
 
   public static void consultarStock (MenuPrincial menuPrincial, boolean rootPaneCheckingEnabled) {
     vistaConsultaStock = new VistaConsultaStock(menuPrincial, rootPaneCheckingEnabled);
     vistaConsultaStock.setVisible(rootPaneCheckingEnabled);
-    stocks = catalogo.getStocks();
+    DefaultTableModel modelo = (DefaultTableModel) vistaConsultaStock.getjTableStock().getModel();
+    modelo.addRow(new Object[] {"asd", "asd", "asd", "asd"});
   }
 
   public static DefaultTableModel cargarStock (DefaultTableModel modeloTabla){
+    sucursal = catalogo.buscarSucursal(Main.getSucursalActual());
+    stocks = sucursal.getStock();
     DefaultTableModel modelo = modeloTabla;
-    stocks = catalogo.getStocks();
     for (Stock stock : stocks) {
       String cantidad = String.valueOf(stock.getCantidad());
       String codigoPrenda = stock.getPrenda().getCodigo();

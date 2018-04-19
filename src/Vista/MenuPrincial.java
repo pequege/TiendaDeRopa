@@ -1,12 +1,15 @@
 package Vista;
 
 import Controlador.*;
+import java.awt.event.ActionEvent;
+import javax.swing.*;
 
 public class MenuPrincial extends javax.swing.JFrame {
-
+	
   public MenuPrincial() {
         initComponents();
 				this.setLocationRelativeTo(null);
+				groupButton();
     }
 
     /**
@@ -22,7 +25,10 @@ public class MenuPrincial extends javax.swing.JFrame {
     jLabel1 = new javax.swing.JLabel();
     jButtonNuevaSolicitud = new javax.swing.JButton();
     jButtonConsultarStock = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
+    jButtonSolicitudesPendientes = new javax.swing.JButton();
+    jRadioButtonSucursal1 = new javax.swing.JRadioButton();
+    jRadioButtonSucursal2 = new javax.swing.JRadioButton();
+    jLabel2 = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,33 +51,64 @@ public class MenuPrincial extends javax.swing.JFrame {
       }
     });
 
-    jButton3.setText("Solicitudes Pendientes");
-    jButton3.addActionListener(new java.awt.event.ActionListener() {
+    jButtonSolicitudesPendientes.setText("Solicitudes Pendientes");
+    jButtonSolicitudesPendientes.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButtonConsultarStock(evt);
+        jButtonSolicitudesPendientesActionPerformed(evt);
       }
     });
+
+    jRadioButtonSucursal1.setText("San Miguel");
+    jRadioButtonSucursal1.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jRadioButtonSucursal1ActionPerformed(evt);
+      }
+    });
+
+    jRadioButtonSucursal2.setText("Yerba Buena");
+    jRadioButtonSucursal2.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jRadioButtonSucursal2ActionPerformed(evt);
+      }
+    });
+
+    jLabel2.setText("Sucursal:");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
     jPanel1Layout.setHorizontalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(jButtonNuevaSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-      .addComponent(jButtonConsultarStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
       .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+        .addComponent(jButtonSolicitudesPendientes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jButtonConsultarStock, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jButtonNuevaSolicitud, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(jPanel1Layout.createSequentialGroup()
+          .addContainerGap()
+          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+              .addComponent(jRadioButtonSucursal1)
+              .addGap(18, 18, 18)
+              .addComponent(jRadioButtonSucursal2))
+            .addComponent(jLabel2))))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addComponent(jLabel1)
-        .addGap(18, 18, 18)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jLabel2)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jRadioButtonSucursal1)
+          .addComponent(jRadioButtonSucursal2))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(jButtonNuevaSolicitud)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(jButtonConsultarStock)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(jButton3)
-        .addContainerGap(85, Short.MAX_VALUE))
+        .addComponent(jButtonSolicitudesPendientes)
+        .addGap(46, 46, 46))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,7 +132,7 @@ public class MenuPrincial extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonNuevaSolicitudActionPerformed(java.awt.event.ActionEvent evt) {                                                      
-      ControladorNuevaSolicitud.crearSolicitud(this, rootPaneCheckingEnabled);
+			ControladorNuevaSolicitud.crearSolicitud(this, rootPaneCheckingEnabled);
       //vistaNuevaSolicitud.setVisible(rootPaneCheckingEnabled);
     }
 
@@ -103,9 +140,19 @@ public class MenuPrincial extends javax.swing.JFrame {
       ControladorConsultarStock.consultarStock(this, rootPaneCheckingEnabled);
     }//GEN-LAST:event_jButtonConsultarStockActionPerformed
 
-  private void jButtonConsultarStock(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+  private void jButtonSolicitudesPendientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
     ControladorSolicitudesPendientes.MostrarSolicitudes(this, rootPaneCheckingEnabled);
   }//GEN-LAST:event_jButton3ActionPerformed
+
+  private void jRadioButtonSucursal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSucursal1ActionPerformed
+    Main.setSucursalActual(jRadioButtonSucursal1.getText());
+    System.out.println(Main.getSucursalActual());
+  }//GEN-LAST:event_jRadioButtonSucursal1ActionPerformed
+
+  private void jRadioButtonSucursal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSucursal2ActionPerformed
+    Main.setSucursalActual(jRadioButtonSucursal2.getText());
+    System.out.println(Main.getSucursalActual());
+  }//GEN-LAST:event_jRadioButtonSucursal2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,10 +190,19 @@ public class MenuPrincial extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton3;
   private javax.swing.JButton jButtonConsultarStock;
   private javax.swing.JButton jButtonNuevaSolicitud;
+  private javax.swing.JButton jButtonSolicitudesPendientes;
   private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
   private javax.swing.JPanel jPanel1;
+  private javax.swing.JRadioButton jRadioButtonSucursal1;
+  private javax.swing.JRadioButton jRadioButtonSucursal2;
   // End of variables declaration//GEN-END:variables
+
+	private void groupButton() {
+		ButtonGroup grupoBotonesSucursal = new ButtonGroup();
+		grupoBotonesSucursal.add(jRadioButtonSucursal1);
+		grupoBotonesSucursal.add(jRadioButtonSucursal2);
+	}
 }

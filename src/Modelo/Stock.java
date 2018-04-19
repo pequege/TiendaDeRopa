@@ -21,6 +21,8 @@ public class Stock {
     public int getCantidad() {
         return cantidad;
     }
+
+
     
     public Stock(int cantidad, Prenda prenda, Color color, Talle talle) {
       this.cantidad = cantidad;

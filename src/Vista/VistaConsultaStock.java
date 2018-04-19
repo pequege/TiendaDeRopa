@@ -13,12 +13,14 @@ public class VistaConsultaStock extends javax.swing.JDialog {
   Catalogo catalogo = new Catalogo();
 
 
+
     public VistaConsultaStock(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
-        limpiarListaDeStock();
-				this.setLocationRelativeTo(parent);
-        cargarStock();
+      super(parent, modal);
+      this.setLocationRelativeTo(parent);
+      initComponents();
+      DefaultTableModel modeloTabla = (DefaultTableModel) jTableStock.getModel();
+      limpiarListaDeStock(modeloTabla);
+      cargarStock(modeloTabla);
     }
 
   /**
@@ -179,13 +181,11 @@ public class VistaConsultaStock extends javax.swing.JDialog {
     return jTableStock;
   }
 
-  public void limpiarListaDeStock() {
-    DefaultTableModel modeloTabla = (DefaultTableModel) jTableStock.getModel();
+  public void limpiarListaDeStock (DefaultTableModel modeloTabla) {
     modeloTabla.setRowCount(0);
   }
 
-  private void cargarStock () {
-    DefaultTableModel modeloTabla = (DefaultTableModel) jTableStock.getModel();
+  public void cargarStock(DefaultTableModel modeloTabla){
     ControladorConsultarStock.cargarStock(modeloTabla);
   }
 }

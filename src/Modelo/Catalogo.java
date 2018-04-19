@@ -10,13 +10,29 @@ public class Catalogo {
   private ArrayList<Prenda> prendas;
   private ArrayList<Talle> talles;
   private ArrayList<Color> colores;
-  private ArrayList<Stock> stocks;
+  private ArrayList<Stock> stock1;
+  private ArrayList<Stock> stock2;
+  private ArrayList<Sucursal> sucursales;
 
-  public void cargarStock () {
-    stocks.add(new Stock(9, buscarPrenda("101"), buscarColor("Azul"), buscarTalle("L")));
-    stocks.add(new Stock(10, buscarPrenda("202"), buscarColor("Azul"), buscarTalle("L")));
-    stocks.add(new Stock(7, buscarPrenda("101"), buscarColor("Blanco"), buscarTalle("S")));
-    stocks.add(new Stock(5, buscarPrenda("303"), buscarColor("Rojo"), buscarTalle("L")));
+  public void cargarStock1 () {
+    stock1.add(new Stock(9, buscarPrenda("101"), buscarColor("Azul"), buscarTalle("L")));
+    stock1.add(new Stock(10, buscarPrenda("202"), buscarColor("Azul"), buscarTalle("L")));
+    stock1.add(new Stock(7, buscarPrenda("101"), buscarColor("Blanco"), buscarTalle("S")));
+    stock1.add(new Stock(5, buscarPrenda("303"), buscarColor("Rojo"), buscarTalle("L")));
+  }
+
+  public void cargarStock2 () {
+    stock2.add(new Stock(8, buscarPrenda("303"), buscarColor("Gris"), buscarTalle("L")));
+    stock2.add(new Stock(11, buscarPrenda("202"), buscarColor("Azul"), buscarTalle("L")));
+    stock2.add(new Stock(6, buscarPrenda("101"), buscarColor("Verde"), buscarTalle("XL")));
+    stock2.add(new Stock(9, buscarPrenda("303"), buscarColor("Rojo"), buscarTalle("L")));
+  }
+
+  public void cargarSucursales(){
+    cargarStock1();
+    sucursales.add(new Sucursal("San Miguel", stock1));
+    cargarStock2();
+    sucursales.add(new Sucursal("Yerba Buena", stock2));
   }
 
   public void cargarPrendas (){
@@ -54,19 +70,21 @@ public class Catalogo {
     return colores;
   }
 
-  public ArrayList<Stock> getStocks () {
-    return stocks;
+  public ArrayList<Sucursal> getSucursales () {
+    return sucursales;
   }
 
   public Catalogo () {
     prendas = new ArrayList<>();
     colores = new ArrayList<>();
     talles = new ArrayList<>();
-    stocks = new ArrayList<>();
+    sucursales = new ArrayList<>();
+    stock1 = new ArrayList<>();
+    stock2 = new ArrayList<>();
     cargarPrendas();
     cargarColores();
     cargarTalles();
-    cargarStock();
+    cargarSucursales();
   }
 
   public Prenda buscarPrenda (String codigoPrenda) {
@@ -98,4 +116,21 @@ public class Catalogo {
     }
     return talleEncontrado;
   }
+
+  public Sucursal buscarSucursal (String sucursalNombre){
+    Sucursal sucursalEncontrada = new Sucursal();
+    for (Sucursal sucursal : sucursales) {
+      if (sucursalNombre == sucursal.getNombreSucursal()){
+        sucursalEncontrada = sucursal;
+      }
+    }
+    return sucursalEncontrada;
+  }
+
+//  public Stock buscarStock (String idStock){
+//    Stock stockEncontrado = new Stock();
+//    for (Stock stock : stocks) {
+//      if (stockEncontrado == stock.)
+//    }
+//  }
 }
